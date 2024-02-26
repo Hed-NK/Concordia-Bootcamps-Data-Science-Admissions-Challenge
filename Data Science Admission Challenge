@@ -1,2 +1,7 @@
 Step 1: Getting Started
 import pandas as pd
+Step 2: Loading and Exporing the Data
+df = pd.read_csv('results.csv')
+df.info()
+Step 3: Data Analysis
+Q1: What is the average number of goals for the home team?
