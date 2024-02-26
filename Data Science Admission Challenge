@@ -24,3 +24,9 @@ FIFA World Cup qualification     8016
 UEFA Euro qualification          2815
 Name: tournament, dtype: int64
 #Q5: Which country has the highest overall FIFA World Cup goals?
+fifa_df = df[df['tournament'] == 'FIFA World Cup']
+fifa_df['total_score'] = fifa_df['home_score'] + fifa_df['away_score']
+grouped_data_by_Country = fifa_df.groupby('country')['total_score'].sum()
+country_with_highest_total_score = grouped_data_by_Country.idxmax()
+print("Country with the highest overall FIFA World Cup goals:", country_with_highest_total_score)
+Country with the highest overall FIFA World Cup goals: Brazil
