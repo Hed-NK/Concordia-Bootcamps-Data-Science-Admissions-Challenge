@@ -1,7 +1,17 @@
-Step 1: Getting Started
+#Step 1: Getting Started
 import pandas as pd
-Step 2: Loading and Exporing the Data
+#Step 2: Loading and Exporing the Data
 df = pd.read_csv('results.csv')
 df.info()
-Step 3: Data Analysis
-Q1: What is the average number of goals for the home team?
+#Step 3: Data Analysis
+#Q1: What is the average number of goals for the home team?
+print(df['home_score'].mean())
+1.7393136930376256
+#Q2: What is the average number of goals for the away team?
+print(df['away_score'].mean())
+1.1782412004854905
+#Q3: What is the country with the highest overall home score?
+grouped_data_by_Country = df.groupby('home_team')['home_score'].sum()
+sum_of_home_scores_for_each_country = = grouped_data_by_Country.idxmax()
+print("Country with the highest sum of home scores:", sum_of_home_scores_for_each_country)
+Country with the highest sum of home scores: Brazil
