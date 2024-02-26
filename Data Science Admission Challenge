@@ -1,1 +1,2 @@
-Step 1: Getting Started 
+Step 1: Getting Started
+import pandas as pd
