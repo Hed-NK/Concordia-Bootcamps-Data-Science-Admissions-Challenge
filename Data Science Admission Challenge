@@ -30,5 +30,3 @@ grouped_data_by_Country = fifa_df.groupby('country')['total_score'].sum()
 country_with_highest_total_score = grouped_data_by_Country.idxmax()
 print("Country with the highest overall FIFA World Cup goals:", country_with_highest_total_score)
 Country with the highest overall FIFA World Cup goals: Brazil
-total_score       268
-Name: 8, dtype: object
