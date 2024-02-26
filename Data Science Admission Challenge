@@ -11,7 +11,7 @@ print(df['home_score'].mean())
 print(df['away_score'].mean())
 1.1782412004854905
 #Q3: What is the country with the highest overall home score?
-grouped_data_by_Country = df.groupby('home_team')['home_score'].sum()
+grouped_data_by_Country = df.groupby('country')['home_score'].sum()
 sum_of_home_scores_for_each_country = = grouped_data_by_Country.idxmax()
 print("Country with the highest sum of home scores:", sum_of_home_scores_for_each_country)
 Country with the highest sum of home scores: Brazil
