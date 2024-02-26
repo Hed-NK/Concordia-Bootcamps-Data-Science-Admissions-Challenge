@@ -14,7 +14,7 @@ print(df['away_score'].mean())
 grouped_data_by_Country = df.groupby('country')['home_score'].sum()
 sum_of_home_scores_for_each_country = = grouped_data_by_Country.idxmax()
 print("Country with the highest sum of home scores:", sum_of_home_scores_for_each_country)
-Country with the highest sum of home scores: Brazil
+Country with the highest sum of home scores: United States
 #Q4: What are the top 3 type of tournaments?
 tournament_count = df['tournament'].value_counts()
 top_three_tournaments = tournament_count.head(3)
