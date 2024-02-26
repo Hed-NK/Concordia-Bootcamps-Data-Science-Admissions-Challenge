@@ -15,3 +15,12 @@ grouped_data_by_Country = df.groupby('home_team')['home_score'].sum()
 sum_of_home_scores_for_each_country = = grouped_data_by_Country.idxmax()
 print("Country with the highest sum of home scores:", sum_of_home_scores_for_each_country)
 Country with the highest sum of home scores: Brazil
+#Q4: What are the top 3 type of tournaments?
+tournament_count = df['tournament'].value_counts()
+top_three_tournaments = tournament_count.head(3)
+print(top_three_tournaments)
+Friendly                        17773
+FIFA World Cup qualification     8016
+UEFA Euro qualification          2815
+Name: tournament, dtype: int64
+#Q5: Which country has the highest overall FIFA World Cup goals?
